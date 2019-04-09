@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+struct libros {
+   char  titulo[50];
+   char  autor[50];
+   char  genero[100];
+   int   id;
+   int anio;
+};
+    void imprimir(struct libros *libro);
+int main( ) {
+   struct libros libro1;
+   struct libros libro2;
+   printf( "Titulo:");
+   gets(libro1.titulo);
+   printf( "Autor:");
+   gets(libro1.autor);
+   printf( "Genero:");
+   gets(libro1.genero);
+   printf( "Id:");
+   scanf("%d",&libro1.id);
+   printf( "Anio:");
+   scanf("%d",&libro1.anio);
+
+   printf( "Libro 1 titulo : %s\n", libro1.titulo);
+   printf( "Libro 1 autor  : %s\n", libro1.autor);
+   printf( "Libro 1 genero : %s\n", libro1.genero);
+   printf( "Libro 1 id     : %d\n", libro1.id);
+   printf( "Libro 1 anio   : %d\n", libro1.anio);
+   printf("\n");
+
+   strcpy( libro2.titulo, "phyton");
+   strcpy( libro2.autor, "jose");
+   strcpy( libro2.genero, "juegos");
+   libro2.id = 6495700;
+   libro1.anio=2000;
+
+
+
+   printf( "Libro 2 \n");
+   imprimir(&libro2);
+
+
+   return 0;
+}
+
+void imprimir(struct libros *libro){
+   printf( "Libro  titulo : %s\n", libro->titulo);
+   printf( "Libro  autor  : %s\n", libro->autor);
+   printf( "Libro  genero : %s\n", libro->genero);
+   printf( "Libro  id     : %d\n", libro->id);
+   printf( "Libro  anio   : %d\n", libro->anio);
+}
