@@ -1,16 +1,16 @@
 #include <stdio.h>
-void seleccion(int *array, int n) {
+void seleccion(int *arreglo, int n) {
   int x,y,min,temp;
   for(x=0;x<n;x++) {
     min=x;
     for(y=x+1;y<n;y++) {
-      if(array[min]>array[y]) {
-        min = y;
+      if(arreglo[min]>arreglo[y]) {
+        min=y;
       }
     }
-    temp = array[min];
-    array[min] = array[x];
-    array[x] = temp;
+    temp=arreglo[min];
+    arreglo[min]=arreglo[x];
+    arreglo[x]=temp;
   }
 }
 void resultado(int arreglo[],int elem){
